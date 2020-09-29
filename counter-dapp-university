@@ -1,0 +1,23 @@
+pragma solidity 0.5.1;
+
+contract Counter { 
+  uint public count = 0;
+
+  event incremento(uint value);
+  event decremento(uint value);
+  
+  function getCount() view public returns(uint) {
+      return count;
+  }
+
+  function increment() public {
+      count += 1;
+      emit incremento(count); 
+  } 
+    
+  function decrement() public {
+      count -= 1;
+      emit decremento(count);
+  }
+ 
+}

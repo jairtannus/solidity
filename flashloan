@@ -10,6 +10,7 @@ import "https://github.com/mrdavey/ez-flashloan/blob/remix/contracts/aave/ILendi
 // 1000 dai = 1000000000000000000000 (Due to 18 decimal number)
 
 contract MyfirstFlashLoan is FlashLoanReceiverBase(address(0x506B0B2CF20FAA8f38a4E2B524EE43e1f4458Cc5)) {
+  
   function flashLoan(uint256 newamount, address _token) external {
     bytes memory _params = "0x0";
     address exchangeAddress = addressesProvider.getLendingPool();
@@ -22,8 +23,8 @@ contract MyfirstFlashLoan is FlashLoanReceiverBase(address(0x506B0B2CF20FAA8f38a
     address _reserve,
     uint256 _amount,
     uint256 _fee,
-    bytes calldata _params
-  ) external {
+    bytes calldata _params) external {
+    
     // INSERT YOUR USE CASE HERE
 
     uint256 totalDebt = _amount.add(_fee);

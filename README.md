@@ -1,2 +1,2 @@
 # solidity
-My solidity codes
+Solidity codes
